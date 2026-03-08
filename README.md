@@ -94,8 +94,8 @@ This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-**Ayush Thakur**
-- GitHub: [@Ayush20Thakur](https://github.com/Ayush20Thakur)
+**Syed Zohaib Karim**
+
 
 ## 🙏 Acknowledgments
 
