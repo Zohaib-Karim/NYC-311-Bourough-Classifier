@@ -1,190 +1,104 @@
 # NYC 311 Complaint Borough Classifier 🗽
 
-A **Machine Learning web application** that predicts which **New York City borough** (Manhattan, Brooklyn, Queens, Bronx, or Staten Island) a **311 complaint likely belongs to based on its text description**.
+A machine learning web application that predicts which NYC borough (Manhattan, Brooklyn, Queens, Bronx, or Staten Island) a 311 complaint likely belongs to based on its text description.
 
-This project uses **Natural Language Processing (NLP)** and a **Bidirectional LSTM (BiLSTM) deep learning model with GloVe embeddings** to analyze complaint descriptions and classify them into one of the five NYC boroughs.
+## 🎯 Features
 
----
+- **🔮 Prediction**: Enter complaint text and get borough predictions with probability scores
+- **📊 Dashboard**: Visualize complaint distribution across boroughs with interactive charts
+- **🌎 Heatmap**: Geographic visualization of complaint density across NYC
+- **📝 History**: Track your prediction history during the session
 
-# 🎯 Features
+## 🛠️ Tech Stack
 
-### 🔮 Borough Prediction
-- Enter a complaint description
-- Predicts the most likely NYC borough
-- Displays **probability scores for all boroughs**
+- **Frontend**: Streamlit
+- **ML Framework**: TensorFlow/Keras
+- **Model**: BiLSTM (Bidirectional LSTM) with GloVe embeddings
+- **Visualization**: Plotly, Folium
+- **Data Processing**: Pandas, NumPy
 
-### 📊 Analytics Dashboard
-- Interactive charts showing complaint distribution
-- Visual insights across boroughs using **Plotly**
+## 📋 Prerequisites
 
-### 🌎 Complaint Heatmap
-- Geographic visualization of complaint density
-- Built using **Folium maps**
-
-### 📝 Prediction History
-- Tracks prediction history during the session
-- Allows users to review previous inputs and results
-
----
-
-# 🛠️ Tech Stack
-
-### Frontend
-- Streamlit
-
-### Machine Learning
-- TensorFlow
-- Keras
-
-### Model
-- Bidirectional LSTM (BiLSTM)
-- GloVe Word Embeddings
-
-### Visualization
-- Plotly
-- Folium
-
-### Data Processing
-- Pandas
-- NumPy
-
----
-
-# 📋 Prerequisites
-
-Make sure you have the following installed:
-
-- Python **3.8 or higher**
+- Python 3.8 or higher
 - pip package manager
 
----
+## 🚀 Installation
 
-# 🚀 Installation
-
-## 1. Clone the Repository
-
+1. Clone the repository:
 ```bash
 git clone https://github.com/Ayush20Thakur/NYC-311-Borough-Classifier-ML-Project.git
 cd NYC-311-Borough-Classifier-ML-Project
 ```
 
-## 2. Create Virtual Environment
-
+2. Create a virtual environment:
 ```bash
 python -m venv venv
 ```
 
-## 3. Activate Virtual Environment
+3. Activate the virtual environment:
+   - Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
 
-### Windows
-```bash
-venv\Scripts\activate
-```
-
-### macOS/Linux
-```bash
-source venv/bin/activate
-```
-
-## 4. Install Dependencies
-
+4. Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
----
+## 🎮 Usage
 
-# 🎮 Usage
-
-Run the Streamlit application:
-
+1. Run the Streamlit app:
 ```bash
 streamlit run app.py
 ```
 
-Then open your browser and go to:
+2. Open your browser and navigate to `http://localhost:8501`
 
-```
-http://localhost:8501
-```
+3. Choose from three tabs:
+   - **Prediction**: Enter complaint text or use example complaints
+   - **Dashboard**: View analytics and distribution charts
+   - **Heatmap**: Explore geographic complaint patterns
 
----
+## 📊 Model Details
 
-# 🧭 Application Tabs
+- **Architecture**: Bidirectional LSTM
+- **Embeddings**: GloVe (Global Vectors for Word Representation)
+- **Task**: Multi-class classification (5 NYC boroughs)
+- **Input**: Text descriptions of 311 complaints
+- **Output**: Borough prediction with confidence scores
 
-### 1️⃣ Prediction
-- Enter a complaint description
-- Get borough predictions with probability scores
-
-### 2️⃣ Dashboard
-- View analytics and distribution charts
-- Interactive visualization of complaint patterns
-
-### 3️⃣ Heatmap
-- Explore complaint density geographically across NYC
-
----
-
-# 📊 Model Details
-
-**Model Architecture:**  
-Bidirectional LSTM (BiLSTM)
-
-**Embeddings:**  
-GloVe (Global Vectors for Word Representation)
-
-**Task:**  
-Multi-class classification (5 NYC boroughs)
-
-**Input:**  
-Text description of a 311 complaint
-
-**Output:**  
-Predicted borough with confidence scores
-
----
-
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```
 NYC-311-Borough-Classifier-ML-Project/
-
-├── app.py
-├── my_bilstm_model.keras
-├── tokenizer.pkl
-├── requirements.txt
-├── test_load.py
-└── README.md
+├── app.py                    # Main Streamlit application
+├── my_bilstm_model.keras     # Trained BiLSTM model
+├── tokenizer.pkl             # Tokenizer for text preprocessing
+├── requirements.txt          # Python dependencies
+├── test_load.py             # Model testing script
+└── README.md                # Project documentation
 ```
 
----
+## 🤝 Contributing
 
-# 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Contributions are welcome.
+## 📝 License
 
-1. Fork the repository
-2. Create a new feature branch
-3. Commit your changes
-4. Submit a Pull Request
+This project is open source and available under the MIT License.
 
----
+## 👤 Author
 
-# 📝 License
+**Ayush Thakur**
+- GitHub: [@Ayush20Thakur](https://github.com/Ayush20Thakur)
 
-This project is licensed under the **MIT License**.
+## 🙏 Acknowledgments
 
----
-
-# 👤 Author
-
-**Syed Zohaib Karim**
-
-
----
-
-# 🙏 Acknowledgments
-
-- **NYC Open Data** for the 311 complaint dataset
-- **TensorFlow & Keras teams**
-- **Streamlit community**
+- NYC Open Data for 311 complaint dataset
+- TensorFlow and Keras teams
+- Streamlit community
